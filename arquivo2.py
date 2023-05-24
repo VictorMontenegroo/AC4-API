@@ -17,8 +17,8 @@ def create_todo():
     return response.text, response.status_code
 
 @app.route('/todos/<int:todo_id>', methods=['DELETE'])
-def delete_todo(todo_id):
-    response = requests.delete(f'{API_URL}/todos/{todo_id}')
+def delete_todo():
+    response = requests.delete(f'{API_URL}/todos')
     return '', response.status_code
 
 if __name__ == '__main__':
